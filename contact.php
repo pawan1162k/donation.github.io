@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <style>
+
+            body{
+    background-image:url("image/2.jpg");
+    background-position: up;
+    background-repeat: no-repeat;
+    background-size: 100%;
+
+  }
+  .modal-content {
+     text-align: center;
+  }
+</style>
+</head>
+<meta charset = "UTF-8" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert2@7.12.15/dist/sweetalert2.all.js"></script>
+<link rel="stylesheet" href="css/modal.css">
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col align-self-start">
+        <p></p>
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation" style="padding-right:30px;">
+            <a href="index.php"><button type="button" class="btn btn-outline-light">Home</button></a>
+          </li>
+          <li class="nav-item" role="presentation" style="padding-right:30px;">
+            <a href="contact.php"><button type="button" class="btn btn-outline-light">Contact us</button></a>
+            <p></p>
+          </li>
+        </ul>
+
+    </div>
+  </div>
+</div>
+  <div class="bg-modal1">
+    <p> </p>
+  <div class="modal-content" id="cont">
+    <div class="close">+</div>
+    <form >
+      <h5><em>Enter your Details</em></h5>
+      <input type="text" id="fname" placeholder="Name"/>
+      <input type="text" id="eml" placeholder="email"/>
+      <input type="text" id="pnumber" placeholder="phone"/>
+      <textarea rows="4" cols="45" name="comment" form="usrform" placeholder="Enter the message"></textarea>
+      <a href="#" ><button type="button" class="btn btn-outline-success" id="f">Submit</button></a>
+    </form>
+  </div>
+</div>
+  </figure>
+
+
+<script type="text/javascript">
+
+document.getElementById('f').addEventListener('click',
+function(){
+  if(document. getElementById("fname"). value. length == 0)
+    {if(document. getElementById("eml"). value. length == 0)
+      {if(document. getElementById("pnumber"). value. length == 0){
+        swal('enter the details');
+  }
+  }
+}else {swal('Thank you!', 'We will contact you soon.', 'success')
+        document.querySelector('.bg-modal1').style.display='none';
+}});
+
+document.querySelector('.close').addEventListener('click',
+function(){
+  document.querySelector('.bg-modal1').style.display='none';
+})
+
+</script>
+
+</body>
+</html>
